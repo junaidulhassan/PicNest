@@ -351,11 +351,6 @@ class MediaTile(Gtk.Widget):
             self._badge_label.set_label(formatting.human_duration(item.duration) if item.duration else "")
             self._badge_label.set_visible(bool(item.duration))
             self._badge.set_visible(True)
-        elif item.is_live_photo:
-            self._badge_icon.set_from_icon_name(icons.LIVE_PHOTOS)
-            self._badge_label.set_label("LIVE")
-            self._badge_label.set_visible(True)
-            self._badge.set_visible(True)
         elif item.is_animated:
             self._badge_icon.set_from_icon_name(icons.PLAY)
             self._badge_label.set_label("GIF" if item.extension == "gif" else "ANIM")

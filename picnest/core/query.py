@@ -107,8 +107,6 @@ def _search_clauses(filters, clauses, parameters):
         parameters.extend(sorted(RAW_IMAGE_EXTENSIONS))
     elif media_type == "screenshots":
         clauses.append(f"(flags & {MediaFlags.SCREENSHOT}) != 0")
-    elif media_type == "live":
-        clauses.append(f"(flags & {MediaFlags.LIVE_PHOTO}) != 0")
     elif media_type == "panoramas":
         clauses.append(f"(flags & {MediaFlags.PANORAMA}) != 0")
     elif media_type == "animated":
@@ -176,8 +174,6 @@ def build_where(spec):
         clauses.append(f"(flags & {MediaFlags.SCREENSHOT}) != 0")
     elif collection == "panoramas":
         clauses.append(f"(flags & {MediaFlags.PANORAMA}) != 0")
-    elif collection == "live":
-        clauses.append(f"(flags & {MediaFlags.LIVE_PHOTO}) != 0")
     elif collection == "people":
         clauses.append("faces > 0")
     elif collection == "album" and spec.album_id is not None:

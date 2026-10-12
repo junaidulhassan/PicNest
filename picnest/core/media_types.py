@@ -43,8 +43,6 @@ TYPE_LABELS = {
     "m2ts": "AVCHD", "mts": "AVCHD", "3gp": "3GPP", "ogv": "Ogg Video",
 }
 
-LIVE_PHOTO_COMPANION_EXTENSIONS = ("mov", "MOV", "mp4", "MP4")
-
 
 def extension_of(name):
     _, extension = os.path.splitext(name)

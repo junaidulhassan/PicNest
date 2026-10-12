@@ -30,9 +30,9 @@ Created by **Junaid Ul Hassan, Software Engineer**.
 - Blurred placeholders while thumbnails load, generated in background threads and cached on disk
 
 **Organization**
-- Library, Memories ("On This Day", "This Week", "Best of"), Years, Favorites, Recents, Videos, Map
+- Library, Memories ("On This Day", "This Week", "Best of"), Years, Favorites, Recents, Videos
 - Albums and Folders (grouped by drive)
-- Smart collections: Screenshots, Panoramas, Live Photos, Duplicates and People (optional, local face detection)
+- Smart collections: Screenshots, Panoramas, Duplicates and People (optional, local face detection)
 - Hidden album with optional password protection
 - Trash with restore and automatic deletion after 30 days (configurable)
 - Storage insights per drive, year and file type
@@ -67,7 +67,7 @@ The screenshots below use generated sample photos.
 | ![Library](docs/screenshots/library.png)<br>**Library:** photos and videos in one grid, grouped by month, day or year, with video duration badges | ![Selection](docs/screenshots/selection.png)<br>**Selection:** pick items one by one, by dragging, or a whole section, then favorite, add to an album, share, hide or delete |
 | ![Viewer](docs/screenshots/viewer.png)<br>**Viewer:** full-screen viewing with zoom, rotate, a filmstrip and slideshow | ![Info panel](docs/screenshots/viewer-info.png)<br>**Info panel:** camera, exposure, size, location and date at a glance |
 | ![Editor](docs/screenshots/editor.png)<br>**Editor:** crop, rotate, filters and color adjustments | ![Memories](docs/screenshots/memories.png)<br>**Memories:** automatic highlights such as "One Year Ago Today" |
-| ![Map](docs/screenshots/map.png)<br>**Map:** photos with GPS data grouped by place | ![Storage](docs/screenshots/storage.png)<br>**Storage:** space used per drive, file type and year |
+| ![Storage](docs/screenshots/storage.png)<br>**Storage:** space used per drive, file type and year | |
 
 ## Requirements
 
@@ -81,7 +81,7 @@ sudo apt install dpkg-dev
 ./build-deb.sh
 ```
 
-The package is written to `dist/picnest_1.0.4_amd64.deb`.
+The package is written to `dist/picnest_1.0.7_amd64.deb`.
 
 `build-deb.sh` uses `dpkg-buildpackage` with the `debian/` directory when debhelper is installed, and otherwise assembles the same layout with `dpkg-deb`. You can choose explicitly:
 
@@ -99,10 +99,10 @@ sudo apt install lintian debhelper
 
 ## Installing
 
-Double-click `dist/picnest_1.0.4_amd64.deb` in Files or Ubuntu Software, or run:
+Double-click `dist/picnest_1.0.7_amd64.deb` in Files or Ubuntu Software, or run:
 
 ```bash
-sudo apt install ./dist/picnest_1.0.4_amd64.deb
+sudo apt install ./dist/picnest_1.0.7_amd64.deb
 ```
 
 Picnest then appears in the app grid. On first launch, the welcome screen offers to scan all drives or only your Pictures and Videos folders.
@@ -145,7 +145,7 @@ picnest/
     viewer.py, image_canvas.py          viewer, zoom and transitions
     video_player.py, filmstrip.py, info_panel.py
     editor.py                           photo editor
-    pages/                              library, albums, folders, years, memories, map, storage
+    pages/                              library, albums, folders, years, memories, storage
     dialogs/                            preferences, welcome, shortcuts, common dialogs
 data/
   icons/                                app icon (SVG, symbolic, PNG sizes) and wordmarks
@@ -158,7 +158,7 @@ build-deb.sh                            one-step package build
 
 ## Icons and logo
 
-The Picnest logo is a colorful parrot perched on a branch inside a rounded-square icon. It ships as a full-color SVG, a symbolic SVG (`picnest-symbolic.svg`), PNG exports from 16 to 512 px, and light and dark wordmarks. Regenerate the PNGs and wordmarks with `tools/render-icons.py`.
+The Picnest logo is a colorful parrot perched on a branch inside a teal rounded-square icon. It ships as a full-color SVG, a symbolic SVG (`picnest-symbolic.svg`), PNG exports from 16 to 512 px, and light and dark wordmarks. Regenerate the PNGs and wordmarks with `tools/render-icons.py`.
 
 Interface icons use the GNOME Adwaita symbolic set for standard window controls, plus a bundled set of symbolic icons from [Phosphor Icons](https://phosphoricons.com) (MIT) with a uniform weight and corner style. `tools/fetch-icons.py` regenerates them.
 

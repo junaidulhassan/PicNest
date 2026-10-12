@@ -1,3 +1,23 @@
+picnest (1.0.7) noble; urgency=medium
+
+  * Remove Live Photos detection, badge and smart collection. Videos that
+    were paired with a photo now show up as normal videos.
+
+ -- Junaid Ul Hassan <tashfeen.dev.ai@gmail.com>  Mon, 12 Oct 2026 18:00:00 +0000
+
+picnest (1.0.6) noble; urgency=medium
+
+  * Replace the app icon with the red parrot logo on a sky blue background.
+  * Remove the Map view and its online tiles setting.
+
+ -- Junaid Ul Hassan <tashfeen.dev.ai@gmail.com>  Mon, 12 Oct 2026 17:00:00 +0000
+
+picnest (1.0.5) noble; urgency=medium
+
+  * Replace the app icon with the teal parrot logo.
+
+ -- Junaid Ul Hassan <tashfeen.dev.ai@gmail.com>  Mon, 12 Oct 2026 16:00:00 +0000
+
 picnest (1.0.4) noble; urgency=medium
 
   * Add per-drive on/off switches in Preferences.

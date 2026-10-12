@@ -8,7 +8,6 @@ from picnest.core.media_types import MediaKind
 class MediaFlags:
     SCREENSHOT = 1
     PANORAMA = 2
-    LIVE_PHOTO = 4
     ANIMATED = 8
 
 
@@ -37,10 +36,6 @@ class MediaItem:
     @property
     def is_trashed(self):
         return self.trashed_at is not None
-
-    @property
-    def is_live_photo(self):
-        return bool(self.flags & MediaFlags.LIVE_PHOTO)
 
     @property
     def is_screenshot(self):

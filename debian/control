@@ -34,7 +34,6 @@ Depends: ${misc:Depends},
 Recommends: gstreamer1.0-gtk4,
             gstreamer1.0-plugins-bad,
             gstreamer1.0-plugins-ugly,
-            gir1.2-shumate-1.0,
             libavif-gdk-pixbuf,
             xdg-desktop-portal,
             gvfs
@@ -44,8 +43,8 @@ Description: modern photo and video gallery for GNOME
  and mounted external drives and shows them in one organized library.
  .
  Features include a fast mixed grid for very large libraries, days, months
- and years views, favorites, albums, folders, memories, a map, smart
- collections for screenshots, panoramas, live photos and duplicates,
+ and years views, favorites, albums, folders, memories, smart
+ collections for screenshots, panoramas and duplicates,
  instant search with filters, a full screen viewer with EXIF details,
  a video player with speed control and picture-in-picture, a basic photo
  editor, a password protected hidden album and a trash with automatic

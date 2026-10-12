@@ -44,11 +44,6 @@ def gstreamer_pbutils():
 
 
 @functools.cache
-def shumate():
-    return _require("Shumate", "1.0")
-
-
-@functools.cache
 def has_paintable_sink():
     gst = gstreamer()
     return gst is not None and gst.ElementFactory.find("gtk4paintablesink") is not None

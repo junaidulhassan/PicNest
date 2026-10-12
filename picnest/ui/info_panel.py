@@ -77,11 +77,6 @@ class InfoPanel(Gtk.Box):
         if item.has_location:
             location_group = Adw.PreferencesGroup(title="Location")
             row = _row(icons.LOCATION, "Coordinates", formatting.coordinate_label(item.latitude, item.longitude))
-            open_button = Gtk.Button(icon_name=icons.OPEN_WITH, valign=Gtk.Align.CENTER, tooltip_text="Open in OpenStreetMap")
-            open_button.add_css_class("flat")
-            open_button.update_property([Gtk.AccessibleProperty.LABEL], ["Open in OpenStreetMap"])
-            open_button.connect("clicked", lambda _button: self._open_map(item.latitude, item.longitude))
-            row.add_suffix(open_button)
             location_group.add(row)
             if item.altitude:
                 location_group.add(_row(icons.PANORAMAS, "Altitude", f"{item.altitude:.0f} m"))
@@ -93,7 +88,3 @@ class InfoPanel(Gtk.Box):
                 album_group.add(_row(icons.ALBUMS, name, ""))
             page.add(album_group)
         self._scrolled.set_child(page)
-
-    def _open_map(self, latitude, longitude):
-        uri = f"https://www.openstreetmap.org/?mlat={latitude:.6f}&mlon={longitude:.6f}#map=15/{latitude:.6f}/{longitude:.6f}"
-        Gtk.UriLauncher(uri=uri).launch(self.get_root(), None, None)

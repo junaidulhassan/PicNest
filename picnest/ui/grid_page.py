@@ -16,8 +16,8 @@ SORT_LABELS = (
     ("size", "Size"),
     ("type", "Type"),
 )
-SORTABLE_COLLECTIONS = {"all", "favorites", "videos", "photos", "screenshots", "panoramas", "live", "people", "album", "folder", "year", "hidden", "search", "memory"}
-GROUPABLE_COLLECTIONS = {"all", "favorites", "videos", "photos", "screenshots", "panoramas", "live", "people", "album", "folder", "year", "hidden", "search"}
+SORTABLE_COLLECTIONS = {"all", "favorites", "videos", "photos", "screenshots", "panoramas", "people", "album", "folder", "year", "hidden", "search", "memory"}
+GROUPABLE_COLLECTIONS = {"all", "favorites", "videos", "photos", "screenshots", "panoramas", "people", "album", "folder", "year", "hidden", "search"}
 
 
 def sidebar_toggle(context):

@@ -182,18 +182,12 @@ class Scanner:
             if not directory_media:
                 continue
             result.media_directories.add(directory)
-            live_stems = self._live_photo_stems(directory_media)
             for path, name, extension, kind, size, mtime in directory_media:
                 seen_paths.add(path)
                 found += 1
                 known = existing.get(path)
                 flags = 0
                 ignored = 0
-                stem = os.path.splitext(name)[0]
-                if kind == MediaKind.IMAGE and stem in live_stems:
-                    flags |= MediaFlags.LIVE_PHOTO
-                if kind == MediaKind.VIDEO and stem in live_stems:
-                    ignored = 1
                 if looks_like_screenshot(name, directory):
                     flags |= MediaFlags.SCREENSHOT
                 if known is None:
@@ -218,17 +212,6 @@ class Scanner:
         if on_progress is not None:
             on_progress(found, scope.path)
 
-    def _live_photo_stems(self, directory_media):
-        image_stems = set()
-        video_stems = set()
-        for _path, name, extension, kind, size, _mtime in directory_media:
-            stem = os.path.splitext(name)[0]
-            if kind == MediaKind.IMAGE and extension in ("heic", "heif", "jpg", "jpeg"):
-                image_stems.add(stem)
-            elif kind == MediaKind.VIDEO and extension in ("mov", "mp4") and size < 30 * 1024 * 1024:
-                video_stems.add(stem)
-        return image_stems & video_stems
-
     def _flush(self, pending_inserts, pending_updates, result, on_batch):
         if not pending_inserts and not pending_updates:
             return
@@ -247,7 +230,7 @@ class Scanner:
             if pending_updates:
                 connection.executemany(
                     """
-                    UPDATE media SET size = ?, mtime = ?, flags = (flags & ~5) | ?, ignored = ?,
+                    UPDATE media SET size = ?, mtime = ?, flags = (flags & ~1) | ?, ignored = ?,
                         metadata_state = 0, thumbnail_state = 0, content_hash = NULL, placeholder = NULL
                     WHERE id = ?
                     """,

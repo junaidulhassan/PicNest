@@ -360,24 +360,6 @@
   border-radius: 10px;
 }
 
-.pn-map-marker {
-  padding: 0;
-  border-radius: 999px;
-  border: 3px solid white;
-  box-shadow: 0 2px 8px alpha(black, 0.45);
-  background: white;
-}
-
-.pn-map-badge {
-  background: @accent_bg_color;
-  color: @accent_fg_color;
-  border-radius: 999px;
-  padding: 0 6px;
-  font-size: 0.78em;
-  font-weight: 800;
-  margin: -4px -6px 0 0;
-}
-
 .pn-stat-tile {
   padding: 16px 18px;
 }

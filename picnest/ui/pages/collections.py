@@ -10,7 +10,7 @@ from picnest.ui.grid_page import GridPage, sidebar_toggle
 from picnest.ui.widgets import connect_weak, empty_state, icon_button, menu_button, set_accessible_label
 
 ORIENTATIONS = (("any", "Any Orientation"), ("landscape", "Landscape"), ("portrait", "Portrait"), ("square", "Square"))
-MEDIA_TYPES = (("all", "All Media"), ("photos", "Photos"), ("videos", "Videos"), ("raw", "RAW Photos"), ("screenshots", "Screenshots"), ("live", "Live Photos"), ("panoramas", "Panoramas"), ("animated", "Animated"))
+MEDIA_TYPES = (("all", "All Media"), ("photos", "Photos"), ("videos", "Videos"), ("raw", "RAW Photos"), ("screenshots", "Screenshots"), ("panoramas", "Panoramas"), ("animated", "Animated"))
 SIZES = ((0, "Any Size"), (1024 * 1024, "Larger than 1 MB"), (10 * 1024 * 1024, "Larger than 10 MB"), (100 * 1024 * 1024, "Larger than 100 MB"))
 SUGGESTION_ICONS = {"albums": icons.ALBUMS, "camera": icons.CAMERA, "folders": icons.FOLDERS, "years": icons.YEARS}
 RESOLUTIONS = ((0.0, "Any Resolution"), (2.0, "2 MP or more"), (8.0, "8 MP or more"), (12.0, "12 MP or more"), (24.0, "24 MP or more"))

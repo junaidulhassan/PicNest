@@ -10,7 +10,6 @@ from picnest.ui.grid_page import GridPage
 from picnest.ui.pages.browse import AlbumsPage, FoldersPage, MemoriesPage, YearsPage
 from picnest.ui.pages.collections import DuplicatesPage, HiddenPage, LibraryPage, PlaceholderPage, SearchPage, TrashPage
 from picnest.ui.pages.insights import InsightsPage
-from picnest.ui.pages.map_page import MapPage
 from picnest.ui.viewer import Viewer
 from picnest.ui.widgets import connect_weak, make_spinner, menu_button
 
@@ -22,7 +21,6 @@ SIDEBAR_SECTIONS = (
         ("favorites", "Favorites", icons.FAVORITE, "favorites"),
         ("recents", "Recents", icons.RECENTS, None),
         ("videos", "Videos", icons.VIDEOS, "videos"),
-        ("map", "Map", icons.MAP, None),
     )),
     ("Collections", (
         ("albums", "Albums", icons.ALBUMS, None),
@@ -31,7 +29,6 @@ SIDEBAR_SECTIONS = (
     ("Smart Collections", (
         ("screenshots", "Screenshots", icons.SCREENSHOTS, "screenshots"),
         ("panoramas", "Panoramas", icons.PANORAMAS, "panoramas"),
-        ("live", "Live Photos", icons.LIVE_PHOTOS, "live"),
         ("people", "People", icons.PEOPLE, "people"),
         ("duplicates", "Duplicates", icons.DUPLICATES, None),
     )),
@@ -47,7 +44,6 @@ SIMPLE_COLLECTIONS = {
     "videos": (icons.VIDEOS, "No Videos", "Videos from all of your drives appear here."),
     "screenshots": (icons.SCREENSHOTS, "No Screenshots", "Screenshots are detected automatically by name and folder."),
     "panoramas": (icons.PANORAMAS, "No Panoramas", "Wide panoramic photos appear here automatically."),
-    "live": (icons.LIVE_PHOTOS, "No Live Photos", "Photos paired with a short motion clip appear here."),
 }
 
 
@@ -222,8 +218,6 @@ class MainWindow(Adw.ApplicationWindow):
             root = YearsPage(context)
         elif key == "memories":
             root = MemoriesPage(context)
-        elif key == "map":
-            root = MapPage(context)
         elif key == "insights":
             root = InsightsPage(context)
         elif key == "search":
@@ -280,7 +274,6 @@ class MainWindow(Adw.ApplicationWindow):
             "section-memories": lambda: self.show_section("memories"),
             "section-years": lambda: self.show_section("years"),
             "section-videos": lambda: self.show_section("videos"),
-            "section-map": lambda: self.show_section("map"),
             "section-folders": lambda: self.show_section("folders"),
             "section-trash": lambda: self.show_section("trash"),
         }

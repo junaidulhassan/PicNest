@@ -85,10 +85,6 @@
       <default>true</default>
       <summary>Remember search history</summary>
     </key>
-    <key name="online-map-tiles" type="b">
-      <default>true</default>
-      <summary>Download map tiles from OpenStreetMap</summary>
-    </key>
     <key name="trash-retention-days" type="i">
       <range min="1" max="365"/>
       <default>30</default>

@@ -35,7 +35,6 @@ ACCELERATORS = {
     "win.section-memories": ["<Alt>4"],
     "win.section-years": ["<Alt>5"],
     "win.section-videos": ["<Alt>6"],
-    "win.section-map": ["<Alt>7"],
     "win.section-folders": ["<Alt>8"],
     "win.section-trash": ["<Alt>9"],
     "window.close": ["<Control>w"],

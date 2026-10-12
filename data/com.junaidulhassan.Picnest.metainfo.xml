@@ -16,8 +16,8 @@
     <ul>
       <li>Automatic discovery across all drives with real-time updates</li>
       <li>A single mixed grid for photos and videos that stays smooth with hundreds of thousands of items</li>
-      <li>Days, months and years views, favorites, albums, folders, recents, memories and a map</li>
-      <li>Smart collections for screenshots, panoramas, live photos and duplicates</li>
+      <li>Days, months and years views, favorites, albums, folders, recents and memories</li>
+      <li>Smart collections for screenshots, panoramas and duplicates</li>
       <li>Instant search with filters for date, type, camera, album, size, resolution and orientation</li>
       <li>A full-screen viewer with zoom, rotation, EXIF details, a filmstrip and slideshows</li>
       <li>A video player with speed control and picture-in-picture</li>
@@ -50,11 +50,26 @@
     <control>touch</control>
   </supports>
   <branding>
-    <color type="primary" scheme_preference="light">#c4b5fd</color>
-    <color type="primary" scheme_preference="dark">#3b2f9e</color>
+    <color type="primary" scheme_preference="light">#bae6fd</color>
+    <color type="primary" scheme_preference="dark">#0369a1</color>
   </branding>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="1.0.7" date="2026-10-12">
+      <description>
+        <p>Live Photos support has been removed.</p>
+      </description>
+    </release>
+    <release version="1.0.6" date="2026-10-12">
+      <description>
+        <p>New red parrot app icon. The Map view has been removed.</p>
+      </description>
+    </release>
+    <release version="1.0.5" date="2026-10-12">
+      <description>
+        <p>New teal parrot app icon.</p>
+      </description>
+    </release>
     <release version="1.0.4" date="2026-10-12">
       <description>
         <p>Individual drives can be turned off and on in Preferences.</p>

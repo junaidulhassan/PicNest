@@ -144,6 +144,20 @@ class Database:
             columns = [row[1] for row in connection.execute("PRAGMA table_info(roots)").fetchall()]
             if "enabled" not in columns:
                 connection.execute("ALTER TABLE roots ADD COLUMN enabled INTEGER NOT NULL DEFAULT 1")
+            if connection.execute("SELECT 1 FROM meta WHERE key = 'live_photos_removed'").fetchone() is None:
+                connection.execute(
+                    """
+                    UPDATE media SET ignored = 0
+                    WHERE ignored = 1 AND kind = 1 AND EXISTS (
+                        SELECT 1 FROM media AS image
+                        WHERE image.folder = media.folder AND image.flags & 4 != 0
+                        AND SUBSTR(image.name, 1, LENGTH(image.name) - LENGTH(image.extension) - 1)
+                          = SUBSTR(media.name, 1, LENGTH(media.name) - LENGTH(media.extension) - 1)
+                    )
+                    """
+                )
+                connection.execute("UPDATE media SET flags = flags & ~4 WHERE flags & 4 != 0")
+                connection.execute("INSERT INTO meta(key, value) VALUES ('live_photos_removed', '1')")
             connection.execute(
                 "INSERT OR IGNORE INTO meta(key, value) VALUES ('schema_version', ?)",
                 (str(SCHEMA_VERSION),),

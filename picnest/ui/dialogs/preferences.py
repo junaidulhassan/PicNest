@@ -129,9 +129,6 @@ class PreferencesDialog(Adw.PreferencesDialog):
         hidden.add(self._password_row)
         page.add(hidden)
         self._update_password_row()
-        network = Adw.PreferencesGroup(title="Network")
-        network.add(self._switch_row("Online Map Tiles", "Download map imagery from OpenStreetMap for the Map view", "online-map-tiles"))
-        page.add(network)
         return page
 
     def _storage_page(self):

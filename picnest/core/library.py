@@ -780,9 +780,6 @@ class Library(GObject.Object):
         )
         return (row[0], row[1]) if row else (0, None)
 
-    def map_points(self):
-        return self.database.query(f"SELECT id, latitude, longitude FROM media WHERE {VISIBLE_FILTER} AND latitude IS NOT NULL AND longitude IS NOT NULL")
-
     def cameras(self):
         rows = self.database.query(
             f"SELECT DISTINCT TRIM(COALESCE(camera_make, '') || ' ' || COALESCE(camera_model, '')) AS camera FROM media WHERE {VISIBLE_FILTER} AND camera_model IS NOT NULL ORDER BY camera"
@@ -795,12 +792,12 @@ class Library(GObject.Object):
     def section_counts(self):
         row = self.database.query_one(
             f"""
-            SELECT COUNT(*), SUM(favorite = 1), SUM(kind = 1), SUM((flags & 1) != 0), SUM((flags & 2) != 0), SUM((flags & 4) != 0), SUM(faces > 0)
+            SELECT COUNT(*), SUM(favorite = 1), SUM(kind = 1), SUM((flags & 1) != 0), SUM((flags & 2) != 0), SUM(faces > 0)
             FROM media WHERE {VISIBLE_FILTER}
             """
         )
         hidden = self.database.scalar("SELECT COUNT(*) FROM media WHERE hidden = 1 AND trashed_at IS NULL AND ignored = 0", default=0)
-        keys = ("all", "favorites", "videos", "screenshots", "panoramas", "live", "people")
+        keys = ("all", "favorites", "videos", "screenshots", "panoramas", "people")
         counts = {key: (value or 0) for key, value in zip(keys, row or ())}
         counts["hidden"] = hidden
         counts["trash"] = self.trash_count()
