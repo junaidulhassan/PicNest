@@ -58,6 +58,17 @@ Created by **Junaid Ul Hassan, Software Engineer**.
 - Drag and drop to and from other apps
 - Keyboard shortcuts for every main action (press Ctrl + ? in the app)
 
+## Screenshots
+
+The screenshots below use generated sample photos.
+
+| | |
+|---|---|
+| ![Library](docs/screenshots/library.png)<br>**Library:** photos and videos in one grid, grouped by month, day or year, with video duration badges | ![Selection](docs/screenshots/selection.png)<br>**Selection:** pick items one by one, by dragging, or a whole section, then favorite, add to an album, share, hide or delete |
+| ![Viewer](docs/screenshots/viewer.png)<br>**Viewer:** full-screen viewing with zoom, rotate, a filmstrip and slideshow | ![Info panel](docs/screenshots/viewer-info.png)<br>**Info panel:** camera, exposure, size, location and date at a glance |
+| ![Editor](docs/screenshots/editor.png)<br>**Editor:** crop, rotate, filters and color adjustments | ![Memories](docs/screenshots/memories.png)<br>**Memories:** automatic highlights such as "One Year Ago Today" |
+| ![Map](docs/screenshots/map.png)<br>**Map:** photos with GPS data grouped by place | ![Storage](docs/screenshots/storage.png)<br>**Storage:** space used per drive, file type and year |
+
 ## Requirements
 
 - Ubuntu 24.04 LTS or newer, amd64
