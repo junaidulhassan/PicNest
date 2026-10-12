@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.junaidulhassan.Picnest</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Picnest</name>
+  <summary>Every photo and video on your computer in one library</summary>
+  <developer id="com.junaidulhassan">
+    <name>Junaid Ul Hassan</name>
+  </developer>
+  <description>
+    <p>
+      Picnest is a fast, modern photo and video gallery for GNOME. It automatically finds every photo and video on your internal drives and connected external drives and presents them in one beautifully organized library, so you never have to dig through folders again.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>Automatic discovery across all drives with real-time updates</li>
+      <li>A single mixed grid for photos and videos that stays smooth with hundreds of thousands of items</li>
+      <li>Days, months and years views, favorites, albums, folders, recents, memories and a map</li>
+      <li>Smart collections for screenshots, panoramas, live photos and duplicates</li>
+      <li>Instant search with filters for date, type, camera, album, size, resolution and orientation</li>
+      <li>A full-screen viewer with zoom, rotation, EXIF details, a filmstrip and slideshows</li>
+      <li>A video player with speed control and picture-in-picture</li>
+      <li>A built-in editor with crop, rotate, filters and color adjustments</li>
+      <li>A hidden album with optional password protection and a trash with automatic cleanup</li>
+    </ul>
+    <p>Created by Junaid Ul Hassan, Software Engineer.</p>
+  </description>
+  <launchable type="desktop-id">com.junaidulhassan.Picnest.desktop</launchable>
+  <provides>
+    <binary>picnest</binary>
+  </provides>
+  <categories>
+    <category>Graphics</category>
+    <category>Photography</category>
+    <category>Viewer</category>
+  </categories>
+  <keywords>
+    <keyword>photos</keyword>
+    <keyword>gallery</keyword>
+    <keyword>videos</keyword>
+    <keyword>albums</keyword>
+  </keywords>
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </supports>
+  <branding>
+    <color type="primary" scheme_preference="light">#c4b5fd</color>
+    <color type="primary" scheme_preference="dark">#3b2f9e</color>
+  </branding>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="1.0.4" date="2026-10-12">
+      <description>
+        <p>Individual drives can be turned off and on in Preferences.</p>
+      </description>
+    </release>
+    <release version="1.0.3" date="2026-10-12">
+      <description>
+        <p>TypeScript files indexed by earlier versions are removed from the library.</p>
+      </description>
+    </release>
+    <release version="1.0.2" date="2026-10-12">
+      <description>
+        <p>New parrot app icon.</p>
+      </description>
+    </release>
+    <release version="1.0.1" date="2026-10-12">
+      <description>
+        <p>New app icon, and TypeScript files are no longer listed as videos.</p>
+      </description>
+    </release>
+    <release version="1.0.0" date="2026-10-12">
+      <description>
+        <p>First release of Picnest.</p>
+      </description>
+    </release>
+  </releases>
+</component>

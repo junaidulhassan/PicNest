@@ -1,0 +1,30 @@
+picnest (1.0.4) noble; urgency=medium
+
+  * Add per-drive on/off switches in Preferences.
+
+ -- Junaid Ul Hassan <tashfeen.dev.ai@gmail.com>  Mon, 12 Oct 2026 15:00:00 +0000
+
+picnest (1.0.3) noble; urgency=medium
+
+  * Remove previously indexed .ts files from existing libraries.
+
+ -- Junaid Ul Hassan <tashfeen.dev.ai@gmail.com>  Mon, 12 Oct 2026 14:00:00 +0000
+
+picnest (1.0.2) noble; urgency=medium
+
+  * Replace the app icon with the parrot logo.
+
+ -- Junaid Ul Hassan <tashfeen.dev.ai@gmail.com>  Mon, 12 Oct 2026 13:00:00 +0000
+
+picnest (1.0.1) noble; urgency=medium
+
+  * Replace the app icon with the new Picnest bird logo.
+  * Stop treating .ts TypeScript files as videos.
+
+ -- Junaid Ul Hassan <tashfeen.dev.ai@gmail.com>  Mon, 12 Oct 2026 12:00:00 +0000
+
+picnest (1.0.0) noble; urgency=medium
+
+  * Initial release of Picnest, a modern photo and video gallery.
+
+ -- Junaid Ul Hassan <tashfeen.dev.ai@gmail.com>  Mon, 12 Oct 2026 09:00:00 +0000

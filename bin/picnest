@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+import os
+import sys
+
+APPLICATION_DIRECTORY = "/usr/share/picnest"
+
+if os.path.isdir(os.path.join(APPLICATION_DIRECTORY, "picnest")):
+    sys.path.insert(0, APPLICATION_DIRECTORY)
+else:
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+
+from picnest.main import main
+
+sys.exit(main())

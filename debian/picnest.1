@@ -1,0 +1,34 @@
+.TH PICNEST 1 "October 2026" "Picnest 1.0.4" "User Commands"
+.SH NAME
+picnest \- modern photo and video gallery for GNOME
+.SH SYNOPSIS
+.B picnest
+[\fIFILE\fR...]
+.SH DESCRIPTION
+.B Picnest
+automatically finds every photo and video on all internal drives and mounted
+external drives and presents them in one organized library with days, months
+and years views, albums, favorites, folders, memories, a map, smart collections,
+instant search, a full screen viewer, a video player and a basic editor.
+.PP
+When files are given on the command line, Picnest adds them to the library and
+opens them in the viewer.
+.SH FILES
+.TP
+.I /etc/picnest/picnest.conf
+System-wide list of paths and folder names that are never scanned.
+.TP
+.I ~/.local/share/picnest/library.db
+The media index, favorites, albums and other library data.
+.TP
+.I ~/.cache/picnest/thumbnails
+Cached thumbnails.
+.SH ENVIRONMENT
+.TP
+.B PICNEST_DEBUG
+Enable debug logging when set.
+.TP
+.B PICNEST_SCAN_ROOTS
+Colon separated list of folders to scan instead of the configured locations.
+.SH AUTHOR
+Created by Junaid Ul Hassan, Software Engineer.

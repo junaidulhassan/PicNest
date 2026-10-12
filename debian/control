@@ -1,0 +1,52 @@
+Source: picnest
+Section: graphics
+Priority: optional
+Maintainer: Junaid Ul Hassan <tashfeen.dev.ai@gmail.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+
+Package: picnest
+Architecture: amd64
+Depends: ${misc:Depends},
+         dconf-gsettings-backend | gsettings-backend,
+         python3 (>= 3.12),
+         python3-gi (>= 3.48),
+         python3-pil,
+         gir1.2-glib-2.0,
+         gir1.2-gtk-4.0 (>= 4.14),
+         gir1.2-adw-1 (>= 1.5),
+         gir1.2-gdkpixbuf-2.0,
+         gir1.2-graphene-1.0,
+         gir1.2-gstreamer-1.0,
+         gir1.2-gst-plugins-base-1.0,
+         gir1.2-gexiv2-0.10,
+         gstreamer1.0-plugins-base,
+         gstreamer1.0-plugins-good,
+         gstreamer1.0-libav,
+         libgtk-4-media-gstreamer | gstreamer1.0-gtk4,
+         heif-gdk-pixbuf,
+         webp-pixbuf-loader,
+         librsvg2-common,
+         libglib2.0-bin,
+         desktop-file-utils,
+         xdg-utils
+Recommends: gstreamer1.0-gtk4,
+            gstreamer1.0-plugins-bad,
+            gstreamer1.0-plugins-ugly,
+            gir1.2-shumate-1.0,
+            libavif-gdk-pixbuf,
+            xdg-desktop-portal,
+            gvfs
+Suggests: python3-opencv
+Description: modern photo and video gallery for GNOME
+ Picnest automatically finds every photo and video on all internal drives
+ and mounted external drives and shows them in one organized library.
+ .
+ Features include a fast mixed grid for very large libraries, days, months
+ and years views, favorites, albums, folders, memories, a map, smart
+ collections for screenshots, panoramas, live photos and duplicates,
+ instant search with filters, a full screen viewer with EXIF details,
+ a video player with speed control and picture-in-picture, a basic photo
+ editor, a password protected hidden album and a trash with automatic
+ cleanup.

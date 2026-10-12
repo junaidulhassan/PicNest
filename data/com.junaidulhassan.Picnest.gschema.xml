@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="picnest">
+  <schema id="com.junaidulhassan.Picnest" path="/com/junaidulhassan/Picnest/">
+    <key name="first-run-complete" type="b">
+      <default>false</default>
+      <summary>Whether the welcome screen has been completed</summary>
+    </key>
+    <key name="scan-all-drives" type="b">
+      <default>true</default>
+      <summary>Scan every internal and external drive</summary>
+    </key>
+    <key name="included-folders" type="as">
+      <default>[]</default>
+      <summary>Additional folders to include in the library</summary>
+    </key>
+    <key name="excluded-folders" type="as">
+      <default>[]</default>
+      <summary>Folders that are never scanned</summary>
+    </key>
+    <key name="include-hidden-folders" type="b">
+      <default>false</default>
+      <summary>Scan folders whose names start with a dot</summary>
+    </key>
+    <key name="minimum-image-kilobytes" type="i">
+      <range min="0" max="10240"/>
+      <default>8</default>
+      <summary>Ignore images smaller than this many kilobytes</summary>
+    </key>
+    <key name="color-scheme" type="s">
+      <choices>
+        <choice value="system"/>
+        <choice value="light"/>
+        <choice value="dark"/>
+      </choices>
+      <default>"system"</default>
+      <summary>Preferred color scheme</summary>
+    </key>
+    <key name="grid-zoom-level" type="i">
+      <range min="0" max="8"/>
+      <default>3</default>
+      <summary>Thumbnail size level of the library grid</summary>
+    </key>
+    <key name="library-grouping" type="s">
+      <choices>
+        <choice value="days"/>
+        <choice value="months"/>
+        <choice value="years"/>
+        <choice value="none"/>
+      </choices>
+      <default>"months"</default>
+      <summary>How the library grid is grouped</summary>
+    </key>
+    <key name="sort-field" type="s">
+      <choices>
+        <choice value="date-taken"/>
+        <choice value="date-modified"/>
+        <choice value="name"/>
+        <choice value="size"/>
+        <choice value="type"/>
+      </choices>
+      <default>"date-taken"</default>
+      <summary>Sort field for media grids</summary>
+    </key>
+    <key name="sort-descending" type="b">
+      <default>true</default>
+      <summary>Sort media grids in descending order</summary>
+    </key>
+    <key name="hover-video-preview" type="b">
+      <default>true</default>
+      <summary>Play muted video previews on hover</summary>
+    </key>
+    <key name="loop-videos" type="b">
+      <default>false</default>
+      <summary>Loop videos in the viewer</summary>
+    </key>
+    <key name="background-thumbnails" type="b">
+      <default>true</default>
+      <summary>Generate thumbnails for the whole library in the background</summary>
+    </key>
+    <key name="remember-recents" type="b">
+      <default>true</default>
+      <summary>Remember recently viewed items</summary>
+    </key>
+    <key name="remember-search-history" type="b">
+      <default>true</default>
+      <summary>Remember search history</summary>
+    </key>
+    <key name="online-map-tiles" type="b">
+      <default>true</default>
+      <summary>Download map tiles from OpenStreetMap</summary>
+    </key>
+    <key name="trash-retention-days" type="i">
+      <range min="1" max="365"/>
+      <default>30</default>
+      <summary>Days before items in the trash are deleted permanently</summary>
+    </key>
+    <key name="hidden-password-hash" type="s">
+      <default>""</default>
+      <summary>Password hash protecting the Hidden album</summary>
+    </key>
+    <key name="slideshow-interval" type="i">
+      <range min="1" max="60"/>
+      <default>5</default>
+      <summary>Seconds between slideshow images</summary>
+    </key>
+    <key name="face-detection" type="b">
+      <default>false</default>
+      <summary>Detect faces locally to build the People collection</summary>
+    </key>
+    <key name="window-width" type="i">
+      <default>1280</default>
+      <summary>Window width</summary>
+    </key>
+    <key name="window-height" type="i">
+      <default>820</default>
+      <summary>Window height</summary>
+    </key>
+    <key name="window-maximized" type="b">
+      <default>false</default>
+      <summary>Window maximized state</summary>
+    </key>
+  </schema>
+</schemalist>

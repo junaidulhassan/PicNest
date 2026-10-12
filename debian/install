@@ -1,0 +1,11 @@
+picnest usr/share/picnest
+bin/picnest usr/bin
+data/style.css usr/share/picnest
+data/ui-icons usr/share/picnest
+data/icons/picnest-wordmark.svg usr/share/picnest/icons
+data/icons/picnest-wordmark-dark.svg usr/share/picnest/icons
+data/icons/hicolor usr/share/icons
+data/com.junaidulhassan.Picnest.desktop usr/share/applications
+data/com.junaidulhassan.Picnest.metainfo.xml usr/share/metainfo
+data/com.junaidulhassan.Picnest.gschema.xml usr/share/glib-2.0/schemas
+data/picnest.conf etc/picnest
